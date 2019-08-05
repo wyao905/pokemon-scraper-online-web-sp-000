@@ -14,7 +14,6 @@ class Pokemon
     self.hp = new_hp
     sql = "UPDATE pokemon SET hp = ? WHERE id = ?;"
     db.execute(sql, self.hp, self.id)
-    binding.pry
   end
   
   def self.save(name, type, db)
