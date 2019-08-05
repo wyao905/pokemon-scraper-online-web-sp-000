@@ -35,6 +35,6 @@ class Pokemon
     SQL
     
     found = db.execute(sql, id_num)[0]
-    self.new(id: found[0], name: found[1], type: found[2], hp: found[3]) if self.
+    self.new(id: found[0], name: found[1], type: found[2], hp: found[3])
   end
 end
