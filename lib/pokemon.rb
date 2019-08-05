@@ -4,10 +4,11 @@ class Pokemon
   attr_accessor :name, :type, :hp
   attr_reader :id, :db
   
-  def initialize(id: nil, name:, type:, db: @db)
+  def initialize(id: nil, name:, type:, db: @db, hp: 60)
     @id = id
     @name = name
     @type = type
+    @hp = hp
   end
   
   def alter_hp(new_hp, db)
@@ -34,6 +35,6 @@ class Pokemon
     SQL
     
     found = db.execute(sql, id_num)[0]
-    self.new(id: found[0], name: found[1], type: found[2]) if self.
+    self.new(id: found[0], name: found[1], type: found[2], hp: found[3]) if self.
   end
 end
